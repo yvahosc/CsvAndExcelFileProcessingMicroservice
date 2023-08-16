@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "bcccc9b8-387f-4680-86a2-bdb21dd0a591",
+		"name": "FileProcessorAndRecordValidator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16910958"
+	},
+	"item": [
+		{
+			"name": "ExcelFileInvalidRecordValidation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fileType\": \"Excel\",\r\n    \"fileRecord\": [\r\n        \"01/01/2020\",\r\n        \"N/A\",\r\n        \"Female\",\r\n        \"50+\",\r\n        \"Crush & Pinch\",\r\n        \"0\",\r\n        \"Georgia\",\r\n        \"First Aid\",\r\n        \"Afternoon\",\r\n        \"Security\",\r\n        \"132\",\r\n        \"Sat\",\r\n        \"1\",\r\n        \"2020\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/file-records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"file-records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExcelFileValidRecordValidation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fileType\": \"Excel\",\r\n    \"fileRecord\": [\r\n        \"01/01/2020\",\r\n        \"Multiple\",\r\n        \"Male\",\r\n        \"25-34\",\r\n        \"Burn\",\r\n        \"0\",\r\n        \"Iowa\",\r\n        \"Near Miss\",\r\n        \"Afternoon\",\r\n        \"Painting\",\r\n        \"0\",\r\n        \"Wed\",\r\n        \"1\",\r\n        \"2020\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/file-records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"file-records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CsvFileValidRecordValidation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fileType\" : \"csv\",\r\n    \"fileRecord\" : [\r\n    \"10\",\r\n    \"f2dceFc00F62542\",\r\n    \"Pedro\",\r\n    \"Cordova\",\r\n    \"Male\",\r\n    \"leslie08@example.com\",\r\n    \"(389)824-3204x8287\",\r\n    \"2008-06-17\",\r\n    \"Phytotherapist\"\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/file-records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"file-records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CsvFileInvalidRecordValidation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fileType\" : \"csv\",\r\n    \"fileRecord\" : [\r\n    \"1\",\r\n    \"5f10e9D33fC5f2b\",\r\n    \"Sara\",\r\n    \"Mcguire\",\r\n    \"Female\",\r\n    \"tsharpexample.net\",\r\n    \"(971)643-6089x9160\",\r\n    \"1921-08-17\",\r\n    \"Editor, commissioning\"\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/file-records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"file-records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExcelFileProcessing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "./src/main/resources/testFiles/sampledatasafety 2.xlsx"
+				},
+				"url": {
+					"raw": "http://localhost:1913/api/v1/file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1913",
+					"path": [
+						"api",
+						"v1",
+						"file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExcelFileProcessingAndRecordsValidation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "./src/main/resources/testFiles/sampledatasafety 2.xlsx"
+				},
+				"url": {
+					"raw": "http://localhost:1913/api/v1/file/file-processor-and-record-validation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1913",
+					"path": [
+						"api",
+						"v1",
+						"file",
+						"file-processor-and-record-validation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CsvFileProcessingAndRecordsValidation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "./src/main/resources/testFiles/people.csv"
+				},
+				"url": {
+					"raw": "http://localhost:1913/api/v1/file/file-processor-and-record-validation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1913",
+					"path": [
+						"api",
+						"v1",
+						"file",
+						"file-processor-and-record-validation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CsvFileProcessing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "./src/main/resources/testFiles/people.csv"
+				},
+				"url": {
+					"raw": "http://localhost:1913/api/v1/file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1913",
+					"path": [
+						"api",
+						"v1",
+						"file"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
